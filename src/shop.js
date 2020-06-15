@@ -4,14 +4,22 @@ import './App.css';
 function Shop() {
 
   useEffect(() => {
-    fetchItems();
+    fetch(
+      "https://fortnite-api.theapinetwork.com/upcoming/get",
+      {
+          headers: {
+              Authorization: 'Bearer [your-token-here]'
+          },
+      }
+   )
+   .then(data => { 
+     data.json()
+    console.log(data)
+  })
   },[])
 
 
-  const fetchItems = async () => {
-    const data = await fetch("https://fortnite-public-api.theapinetwork.com/prod09/upcoming/get")
-    console.log(data)
-  }
+  
 
 
   return (
