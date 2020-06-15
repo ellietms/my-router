@@ -4,6 +4,7 @@ import Nav from './Nav';
 import About from './about';
 import Shop from './shop';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import Moon from './Moon';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/shop" component={Shop} />
+      <Route path="/shop" exact component={Shop} />
+      <Route path="/shop/:id" component ={Moon} />
       </Switch>
     </div>
     </Router>
