@@ -20,9 +20,9 @@ function Nav() {
                 About
                 </li>
                 </Link>
-                <Link to="/shop" style={navStyle}>
+                <Link to="/sky" style={navStyle}>
                 <li>
-                Shop
+                Sky
                 </li>
                 </Link>
             </ul>
